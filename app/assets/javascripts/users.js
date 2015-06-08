@@ -17,12 +17,12 @@ $(document).ready(function(){
         cvc: cvcNum,
         exp_month: expMonth,
         exp_year: expYear
-      }, StripeResponseHandler);
+      }, stripeResponseHandler);
     }
     return false;
   }); // form submission
   
-  function StripeResponseHandler(status, response){
+  function stripeResponseHandler(status, response){
     // Get a response to the form:
     var f = $("#new_user");
     

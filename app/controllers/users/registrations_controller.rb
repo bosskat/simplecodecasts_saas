@@ -1,4 +1,4 @@
-class Users::RegistrationsController < Devise::RegitrationsController
+class Users::RegistrationsController < Devise::RegistrationsController
   
   def create
     super do |resource|
@@ -8,6 +8,8 @@ class Users::RegistrationsController < Devise::RegitrationsController
           resource.save_with_payment
         else
           resource.save
+        end
+      end
     end
   end
 end
